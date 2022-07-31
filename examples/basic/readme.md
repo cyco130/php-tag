@@ -2,6 +2,9 @@
 
 A simple `php-tag` example.
 
+- [Client code](./client.mjs)
+- [Server code](./index.php)
+
 ## Getting started
 
 ```sh

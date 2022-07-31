@@ -4,21 +4,18 @@ if (
   $_SERVER["REQUEST_URI"] !== "/php-tag" ||
   $_SERVER["REQUEST_METHOD"] !== "POST"
 ) {
-  echo "URI: " .
-    $_SERVER["REQUEST_URI"] .
-    " Method: " .
-    $_SERVER["REQUEST_METHOD"] .
-    "\n";
   http_response_code(400);
   return false;
 }
 
-// Posted JSON data
 $data = json_decode(file_get_contents("php://input"), true);
 
 $args = $data["args"] ?? null;
 
-if (getenv("NODE_ENV") !== "development") {
+
+if (getenv("PHP_TAG_ENV") === "development") {
+  // In development, the code itself is in the payload
+  // as an array of string literals.
   $parts = $data["selector"] ?? null;
   if (!is_array($parts) || !is_array($args)) {
     http_response_code(400);
@@ -49,6 +46,8 @@ if (getenv("NODE_ENV") !== "development") {
   echo json_encode(call_user_func_array(eval($function), $args));
   exit();
 } else {
+  // In production, the code is in a separate file and the selector is
+  // a the file name.
   $hash = $data["selector"] ?? null;
   if (
     !is_string($hash) ||

@@ -2,7 +2,7 @@
   "name": "example-php-tag",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development vite",
+    "dev": "cross-env PHP_TAG_ENV=development vite",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -10,6 +10,7 @@
     "php-tag": "0.0.0"
   },
   "devDependencies": {
+    "@types/node": "^18.0.3",
     "cross-env": "^7.0.3",
     "kill-port": "^2.0.1",
     "vite": "^3.0.4"
