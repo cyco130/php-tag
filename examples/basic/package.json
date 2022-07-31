@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "php-tag": "0.0.0"
+    "php-tag": "0.0.1"
   },
   "devDependencies": {
     "@types/node": "^18.0.3",

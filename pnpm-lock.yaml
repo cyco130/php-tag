@@ -21,7 +21,7 @@ importers:
       "@types/node": ^18.0.3
       cross-env: ^7.0.3
       kill-port: ^2.0.1
-      php-tag: 0.0.0
+      php-tag: 0.0.1
       vite: ^3.0.4
     dependencies:
       php-tag: link:../../packages/php-tag

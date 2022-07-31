@@ -61,7 +61,7 @@ npm run preview
 
 ## What about `node-tag`?
 
-[It already exists](https://github.com/cyco130/php-tag/tree/main/examples/basic) in a much more useful form and type-safe form. It will be available with the next version of Rakkas in early August 2022.
+[It already exists](https://stackblitz.com/edit/use-ssq?file=src%2Froutes%2Findex.page.tsx) in a much more useful form and type-safe form. It will be available with the next version of [Rakkas](https://github.com/rakkasjs/rakkasjs/tree/next) in early August 2022.
 
 ## License
 
