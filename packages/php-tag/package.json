@@ -1,15 +1,29 @@
 {
-  "name": "TODO",
-  "version": "0.0.0-TODO",
+  "name": "php-tag",
+  "version": "0.0.0",
   "type": "module",
   "files": [
-    "dist",
-    "*.d.ts"
+    "dist"
   ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./babel-plugin": {
+      "import": "./dist/babel-plugin.js",
+      "require": "./dist/babel-plugin.cjs"
+    },
+    "./vite-plugin": {
+      "import": "./dist/vite-plugin.js",
+      "require": "./dist/vite-plugin.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*.d.ts"
+      ]
     }
   },
   "scripts": {
@@ -22,19 +36,27 @@
     "test:lint": "eslint . --max-warnings 0 --ignore-pattern dist",
     "test:package": "publint"
   },
-  "description": "TODO",
+  "description": "Write your backend PHP code in a JavaScript tagged template literal",
   "license": "MIT",
-  "repository": "https://github.com/TODO/TODO",
+  "repository": "https://github.com/cyco130/php-tag",
   "keywords": [
-    "TODO"
+    "php",
+    "rpc",
+    "babel-plugin"
   ],
+  "dependencies": {
+    "@babel/core": "^7.18.9"
+  },
   "devDependencies": {
+    "@babel/types": "^7.18.9",
     "@cyco130/eslint-config": "^2.0.0",
+    "@types/babel__core": "^7.1.19",
     "@types/node": "^18.0.3",
     "eslint": "^8.19.0",
     "publint": "^0.1.1",
     "tsup": "^6.1.3",
     "typescript": "^4.7.4",
+    "vite": "^3.0.4",
     "vitest": "^0.17.1"
   }
 }
