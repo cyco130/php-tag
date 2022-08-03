@@ -16,17 +16,27 @@ async function run() {
 }
 ```
 
-## Anticipated questions
+## Anticipated reactions
 
-- Oh the horror! Why? Just why?
+- **Oh the horror! Why? Just why?**
 
-  Because I can.
+  Because I can :D
 
-- Is this a good idea?
+- **This is a terrible idea!**
 
-  Colocation is good, isn't it?. Like Next.js's `getServerSideProps` but for PHP backends. Is it _really_ that different? With some IDE support it could be pretty useful, methinks.
+  But colocation is good, isn't it? Like Next.js's `getServerSideProps` but for PHP backends. Is it _really_ that different? With some IDE support it could be pretty useful, methinks.
 
   Still not buying it? OK, neither am I.
+
+- **Isn't it unsafe?**
+
+  In production, it's no less safe than any other API endpoint. Just remember to treat interpolated values like any other user input and validate them.
+
+## Actual reactions
+
+![Reactions](https://github.com/cyco130/php-tag/raw/main/pics/reactions.png)
+
+Interestingly the PHP community was more receptive thant the JavaScript community.
 
 ## How does it work?
 
