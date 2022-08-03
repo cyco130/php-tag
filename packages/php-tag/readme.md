@@ -42,7 +42,7 @@ Interestingly the PHP community was more receptive thant the JavaScript communit
 
 `php-tag` comes in the form of a Vite plugin (`php-tag/vite-plugin`). If you want to use with other tools, the underlying Babel transform (`php-tag/babel-plugin`) is also available.
 
-For the production build, the Babel transform extracts each piece of PHP code into its own PHP file with a unique name. The client sends this name along with the interpolated arguments as a POST request with a JSON body to the `/php-tag` and point. The backend is supposed to provide a dispatcher at that endpoint that loads the requested PHP file and executes it with the arguments sent.
+For the production build, the Babel transform extracts each piece of PHP code into its own PHP file with a unique name. The client sends this name along with the interpolated arguments as a POST request with a JSON body to the `/php-tag` endpoint. The backend is supposed to provide a dispatcher at that endpoint that loads the requested PHP file and executes it with the arguments sent.
 
 During development, the client sends the code itself instead of a file name and the backend just `eval`s it.
 
