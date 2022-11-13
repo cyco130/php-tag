@@ -71,7 +71,7 @@ npm run preview
 
 ## What about `node-tag`?
 
-[It already exists](https://stackblitz.com/edit/use-ssq?file=src%2Froutes%2Findex.page.tsx) in a much more useful and type-safe form. It will be available with the next version of [Rakkas](https://github.com/rakkasjs/rakkasjs/tree/next) in early August 2022.
+[It already exists](https://rakkasjs.org/guide/use-server-side-query) under the name `useServersideQuery` in a much more useful and type-safe form in Rakkas, a React metaframework with some cutting-edge features.
 
 ## License
 
